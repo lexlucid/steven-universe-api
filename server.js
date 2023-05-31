@@ -60,7 +60,7 @@ app.get('/api/:gems', (request, response) => {
 //     response.json(characters.humans)
 // })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server listening on port ${PORT}`)
 })
 
