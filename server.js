@@ -48,7 +48,7 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/characters', (request, response) => {
+app.get('/characters', (request, response) => {
     response.json(characters)
     console.log("I'm working")
 })
