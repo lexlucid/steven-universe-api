@@ -48,8 +48,9 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api', (request, response) => {
+app.get('/api/characters', (request, response) => {
     response.json(characters)
+    console.log("I'm working")
 })
 
 // app.get('/api/:gems', (request, response) => {
