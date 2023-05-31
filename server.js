@@ -48,11 +48,15 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:gems', (request, response) => {
-    const gems = request.params.gems.toLowerCase()
-    console.log(request.params.gems)
-    response.json(characters.gems)
+app.get('/api', (request, response) => {
+    response.json(characters)
 })
+
+// app.get('/api/:gems', (request, response) => {
+//     const gems = request.params.gems.toLowerCase()
+//     console.log(request.params.gems)
+//     response.json(characters.gems)
+// })
 
 // app.get('/api/:humans', (request, response) => {
 //     const humans = request.params.humans.toLowerCase()
