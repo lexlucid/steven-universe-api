@@ -4,7 +4,7 @@ const cors = require("cors")
 const PORT = 8000
 
 app.use(cors())
-
+app.use(express.static('public'))
 
 let characters = {
     "gems": [
@@ -50,7 +50,6 @@ app.get('/', (request, response) => {
 
 app.get('/characters', (request, response) => {
     response.json(characters)
-    console.log("I'm working")
 })
 
 // app.get('/api/:gems', (request, response) => {
