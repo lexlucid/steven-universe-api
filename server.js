@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const PORT = 8000
+const PORT = process.env.PORT || 3000
 
 app.use(cors())
 app.use(express.static('public'))
@@ -45,7 +45,8 @@ let characters = {
 }
 
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
+    // response.sendFile(__dirname + '/index.html')
+    res.send("Watermelon Steven!")
 })
 
 app.get('/characters', (request, response) => {
@@ -64,7 +65,7 @@ app.get('/characters', (request, response) => {
 //     response.json(characters.humans)
 // })
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
 })
 
