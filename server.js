@@ -47,6 +47,7 @@ let characters = {
 app.get('/', (req, res) => {
     // response.sendFile(__dirname + '/index.html')
     res.send("Watermelon Steven!")
+    console.log("I'm working!")
 })
 
 app.get('/characters', (request, response) => {
