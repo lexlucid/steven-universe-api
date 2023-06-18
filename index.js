@@ -51,6 +51,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/characters', (request, response) => {
+    response.setHeader('Content-Type', 'application/json');
     response.json(characters)
 })
 
